@@ -57,6 +57,11 @@ NodeLikeListener::get_node_base_interface() const
   return this->node_->get_node_base_interface();
 }
 
+rclcpp::tcl_node_interfaces::NodeTimingInterface::SharedPtr
+NodeLikeListener::get_node_timing_interface() const
+{
+  return this->node_->get_node_timing_interface();
+}
 }  // namespace composition
 
 #include "rclcpp_components/register_node_macro.hpp"
